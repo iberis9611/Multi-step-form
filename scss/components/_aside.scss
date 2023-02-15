@@ -1,0 +1,36 @@
+@use '../utils' as u;
+
+.aside {
+    height: u.rem(171);
+    display: flex;
+    justify-content: center;
+    gap: u.rem(16);
+    padding-top: u.rem(32);   
+    padding-bottom: u.rem(106); 
+    background-image: url("../../assets/images/bg-sidebar-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__span {
+        display: block;
+        background-color: transparent;
+        width: u.rem(32);
+        height: u.rem(32);
+        border: u.rem(1) solid hsl(0, 0%, 100%);
+        color: hsl(0, 0%, 100%);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__section {
+        display: none;
+    }
+}
+
+.highlight {
+    background-color: hsl(206, 94%, 87%);
+    color: hsl(0, 0%, 0%);
+}

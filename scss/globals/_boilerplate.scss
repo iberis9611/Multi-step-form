@@ -1,0 +1,71 @@
+@use '../utils' as u;
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,
+*::before, 
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+body {
+    height: max(u.rem(600), 100vh);
+    font: u.rem(16) u.$font;
+    background-color: hsl(217, 100%, 97%);
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    padding: u.rem(15) u.rem(16);
+    border: 1px solid transparent;
+    border-radius: u.rem(4);
+    color: hsl(0, 0%, 100%);
+}
+
+button:hover, button:focus {
+    opacity: .7;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    cursor: pointer;
+}
+
+button[data-confirm] {
+    background-color: hsl(243, 100%, 62%);
+}
+
+button[data-previous] {
+    background-color: transparent;
+    color: hsl(231, 11%, 63%);
+    
+}
+
+button[data-next] {
+    background-color: hsl(213, 96%, 18%);
+    grid-column: 2 / 3;
+}
+
+fieldset {
+    border: 0;
+}
+
+input[type=checkbox] {
+    accent-color: hsl(243, 100%, 62%);
+    width: u.rem(20);
+    height: u.rem(20);
+}
+
+input[type=checkbox]:hover,[type=checkbox]:focus {
+    cursor: pointer;
+}

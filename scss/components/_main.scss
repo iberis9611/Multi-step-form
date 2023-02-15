@@ -1,0 +1,14 @@
+@use '../utils' as u;
+
+.main {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+
+    &__form {
+        height: inherit;
+        position: relative;
+        overflow: hidden;
+    }
+}

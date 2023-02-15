@@ -1,0 +1,50 @@
+@use '../utils' as u;
+
+.subscription {
+    background-color: hsla(218, 10%, 77%, 0.1);
+    padding-block: u.rem(13);
+    padding-inline: u.rem(52); 
+    border-radius: u.rem(8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__button {
+        width: u.rem(38);
+        height: u.rem(20);
+        padding-inline: u.rem(4);
+        border-radius: u.rem(15);
+        background-color: hsl(213, 96%, 18%);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &__span {
+        display: block;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 50%;
+        width: u.rem(12);
+        height: u.rem(12);
+    }
+
+    &__span:hover, &__span:focus {
+        cursor: pointer;
+        transform: scale(1.2) translateX(u.rem(1));
+        transition-duration: 0.2s;
+        transition-timing-function: linear;
+    }
+
+
+    &__p {
+        color: hsl(231, 11%, 63%);
+    }
+}
+
+.subscribed {
+    color: hsl(213, 96%, 18%);
+}
+
+.moved {
+    justify-content: flex-start;
+}

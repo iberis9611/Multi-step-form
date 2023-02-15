@@ -1,0 +1,43 @@
+@use '../utils' as u;
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: translateX(200%);
+    opacity: 0;
+
+    &__main {
+        width: calc(100% - u.rem(15));
+        position: absolute;
+        top: u.rem(96);
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+        padding-top: u.rem(36);
+        padding-bottom: u.rem(32);
+        padding-inline: u.rem(24);
+        background-color: hsl(231, 100%, 99%);
+        border-radius: u.rem(8);
+        box-shadow: 0 u.rem(5) u.rem(10) hsla(0, 0%, 27%, 0.2);
+        display: flex;
+        flex-direction: column;
+        gap: u.rem(24);
+    }
+
+    &__bottom {
+        width: 100%;
+        height: u.rem(74);
+        position: absolute;
+        bottom: 0;
+        padding: u.rem(16);
+        background-color: hsl(0, 0%, 100%);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.card.active {
+    transform: translateX(0);
+    opacity: 1;
+}

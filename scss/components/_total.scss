@@ -1,0 +1,17 @@
+@use '../utils' as u;
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__p {
+        color: hsl(231, 11%, 63%);
+        font-size: u.rem(12);
+
+        &-blue {
+            color: hsl(243, 100%, 62%);
+            font-weight: 500;
+        }
+    }
+}

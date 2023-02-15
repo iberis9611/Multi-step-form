@@ -1,0 +1,36 @@
+@use '../utils' as u;
+
+.plan {
+    border: u.rem(1) solid hsl(229, 24%, 87%);
+    
+    border-radius: u.rem(8);
+    padding: u.rem(16);
+    flex-direction: row;
+    gap: u.rem(15);
+
+    &__figcaption {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: u.rem(3);
+    }
+
+    &__h3 {
+        font-weight: 500;
+        color: hsl(213, 96%, 18%);
+    }
+
+    &__p {
+        color: hsl(231, 11%, 63%);
+        font-size: u.rem(14);
+    }
+}
+
+.plan:hover, .plan:focus {
+    cursor: pointer;
+}
+
+.selected {
+    border: u.rem(1) solid hsl(243, 100%, 62%);
+    background-color: hsla(243, 100%, 62%, 0.02);
+}

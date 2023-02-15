@@ -1,0 +1,29 @@
+@use '../utils' as u;
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: u.rem(10);
+
+    &__choice {
+        display: flex;
+        flex-direction: column;
+        gap: u.rem(5);
+    }
+
+    &__input {
+        border: 1px solid hsl(229, 24%, 87%);
+        border-radius: u.rem(4);
+        padding: u.rem(15);
+    }
+
+    &__input::placeholder {
+        color: hsl(231, 11%, 63%);
+    }
+
+    &__label {
+        color: hsl(213, 96%, 18%);
+        display: flex;
+        justify-content: space-between;
+    }
+}
