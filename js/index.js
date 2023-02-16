@@ -10,17 +10,17 @@ const subscriptions = [...document.querySelectorAll("[data-subscription]")];
 const plansInfo = [...document.querySelectorAll(".plan__figcaption")] ;
 const plansPrice = [...document.querySelectorAll(".plan__p")];
 const plans = [...document.querySelectorAll("[data-plan]")];
-const addonsPrice = [...document.querySelectorAll(".addon__p-blue")];
-const addons = [...document.querySelectorAll(".addon")];
+const addonsPrice = [...document.querySelectorAll("[data-addon-price]")];
+const addons = [...document.querySelectorAll(".addon__item")];
 const selectedPlanName = document.querySelector(".summary__plan__name");
 const selectedPlanDurarion = document.querySelector(".summary__plan__duration");
 const selectedPlanPrice = document.querySelector("#planPrice")
-const changePlanBtn = document.querySelector(".summary__p-underline");
+const changePlanBtn = document.querySelector("[data-change]");
 const durationTotal = document.querySelector(".total__duration");
 const summaryAddons = [...document.querySelectorAll(".summary__addons__item")];
 const summaryAddonContainer = document.querySelector(".summary__addons");
 const priceTotal = document.querySelector("#total");
-const summaryAddonsPrice = [...summaryAddonContainer.querySelectorAll(".summary__p-blue")];
+const summaryAddonsPrice = [...summaryAddonContainer.querySelectorAll(".marineBlue")];
 const confirmBtn = document.querySelector("[data-confirm]");
 
 // Return the index of step. starting from 0. Return -1 if there is no element.
@@ -98,9 +98,9 @@ nextBtns.forEach((btn, index) => {
             })
 
             if (currentSubscription === 0) {
-                priceTotal.textContent = `$${total}/mo`;
+                priceTotal.textContent = `+$${total}/mo`;
             } else {
-                priceTotal.textContent = `$${total}/yr`;
+                priceTotal.textContent = `+$${total}/yr`;
             }
         }
     })

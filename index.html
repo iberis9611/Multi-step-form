@@ -9,220 +9,224 @@
   <script type="module" src="./js/index.js"></script>
 </head>
 <body>
-  <aside class="aside">
-    <div class="aside__step">
-      <span class="aside__span highlight">1</span>
-      <section class="aside__section">
-        <p class="aside__p">Step 1</p>
-        <h3 class="aside__h3">Your info</h3>
-      </section>
-    </div>
-    <div class="aside__step">
-      <span class="aside__span">2</span>
-      <section class="aside__section">
-        <p class="aside__p">Step 2</p>
-        <h3 class="aside__h3">Select plan</h3>
-      </section>
-    </div>
-    <div class="aside__step">
-      <span class="aside__span">3</span>
-      <section class="aside__section">
-        <p class="aside__p">Step 3</p>
-        <h3 class="aside__h3">Add-ons</h3>
-      </section>
-    </div>
-    <div class="aside__step">
-      <span class="aside__span">4</span>
-      <section class="aside__section">
-        <p class="aside__p">Step 4</p>
-        <h3 class="aside__h3">Summary</h3>
-      </section>
-    </div>
-  </aside>
   <main class="main">
-    <form class="main__form" data-multi-step>
-      <fieldset class="card active" data-step>
-        <div class="card__main">
-          <legend class="card__legend legend">
-            <h2 class="legend__h2">Personal info</h2>
-            <p class="legend__p">Please provide your name, email address, and phone number.</p>
-          </legend>
-          <div class="card__content content">
-            <div class="content__choice">
-              <label class="content__label" for="name"><span>Name</span></label>
-              <input 
-              class="content__input" 
-              type="text" 
-              name="name" 
-              id="name" 
-              placeholder="e.g. Stephen King" 
-              required
-              pattern="^[a-zA-Z ]*$"
-              >
-            </div>
-            <div class="content__choice">
-              <label class="content__label" for="email"><span>Email Address</span></label>
-              <input 
-                class="content__input" 
-                type="email" 
-                name="email" 
-                id="email" 
-                placeholder="e.g. stephenking@lorem.com" 
-                required
-                pattern="^\w+@\w+.(com|cn)$"
-              >
-            </div>
-            <div class="content__choice">
-              <label class="content__label" for="phone"><span>Phone Number</span></label>
-              <input 
-                class="content__input" 
-                type="tel" name="phone" 
-                id="phone" 
-                placeholder="e.g. +1 234 567 890" 
-                required
-                pattern="^\+1(\s\d{3}){3}$"
-              >
-            </div>
-          </div>
-        </div>
-        <div class="card__bottom">
-          <button class="button" type="button" data-next>Next Step</button>
-        </div>
-      </fieldset>
-      <fieldset class="card" data-step>
-        <div class="card__main">
-          <legend class="card__legend legend">
-            <h2 class="legend__h2">Select your plan</h2>
-            <p class="legend__p">You have the option of monthly or yearly billing.</p>
-          </legend>
-          <div class="card__content content">
-            <figure class="content__choice plan selected" data-plan>
-              <img src="./assets/images/icon-arcade.svg" alt="arcade icon" width="40" height="40">
-              <figcaption class="plan__figcaption">
-                <h3 class="plan__h3">Arcade</h3>
-                <p class="plan__p">$9/mo</p>
-              </figcaption>
-            </figure>
-            <figure class="content__choice plan" data-plan>
-              <img src="./assets/images/icon-advanced.svg" alt="advanced icon" width="40" height="40">
-              <figcaption class="plan__figcaption">
-                <h3 class="plan__h3">Advanced</h3>
-                <p class="plan__p">$12/mo</p>
-              </figcaption>
-            </figure>
-            <figure class="content__choice plan" data-plan>
-              <img src="./assets/images/icon-pro.svg" alt="pro icon" width="40" height="40">
-              <figcaption class="plan__figcaption">
-                <h3 class="plan__h3">Pro</h3>
-                <p class="plan__p">$15/mo</p>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="card__footer subscription">
-            <p class="subscription__p subscribed" data-subscription>Monthly</p>
-            <div class="subscription__button moved"><span class="subscription__span"></span></div>
-            <p class="subscription__p" data-subscription>Yearly</p>
-          </div>
-        </div>
-        <div class="card__bottom">
-          <button class="button" type="button" data-previous>Go Back</button>
-          <button class="button" type="button" data-next>Next Step</button>
-        </div>
-      </fieldset>
-      <fieldset class="card" data-step>
-        <div class="card__main">
-          <legend class="card__legend legend">
-            <h2 class="legend__h2">Pick add-ons</h2>
-            <p class="legend__p">Add-ons help enhance your gaming experience.</p>
-          </legend>
-          <div class="card__content content">
-            <div class="addon content__choice picked">
-              <input class="addon__input" type="checkbox" id="onlineService" name="onlineService" checked>
-              <label class="addon__label" for="onlineService">
-                <div class="addon__wrapper">
-                  <h4 class="addon__h4">Online service</h4>
-                  <p class="addon__p">Access to multiplayer games</p>
-                </div>
-                <p class="addon__p addon__p-blue">+$1/mo</p>
-              </label>
-            </div>
-            <div class="addon content__choice picked">
-              <input class="addon__input" type="checkbox" id="largeStorage" name="largeStorage" checked>
-              <label class="addon__label" for="largeStorage">
-                <div class="addon__wrapper">
-                  <h4 class="addon__h4">Larger storage</h4>
-                  <p class="addon__p">Extra 1TB of cloud save</p>
-                </div>
-                <p class="addon__p addon__p-blue">+$2/mo</p>
-              </label>
-            </div>
-            <div class="addon content__choice">
-              <input class="addon__input" type="checkbox" id="customizableProfile" name="customizableProfile">
-              <label class="addon__label" for="customizableProfile">
-                <div class="addon__wrapper">
-                  <h4 class="addon__h4">Customizable Profile</h4>
-                  <p class="addon__p">Custom theme on your profile</p>
-                </div>
-                <p class="addon__p addon__p-blue">+$2/mo</p>
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="card__bottom">
-          <button class="button" type="button" data-previous>Go Back</button>
-          <button class="button" type="button" data-next>Next Step</button>
-        </div>
-      </fieldset>
-      <fieldset class="card" data-step>
-        <div class="card__main">
-          <legend class="card__legend legend">
-            <h2 class="legend__h2">Finishing up</h2>
-            <p class="legend__p">Double-check everything looks OK before confirming.</p>
-          </legend>
-          <div class="card__summary summary">
-            <div class="summary__plan">
-              <div class="summary__plan__info">
-                <p class="summary__p summary__p-blue-bold"><span class="summary__plan__name">Arcade</span>(<span class="summary__plan__duration">Monthly</span>)</p>
-                <p class="summary__p summary__p-underline">Change</p>
-              </div>
-              <p class="summary__p summary__p-blue-bold" id="planPrice">$9/mo</p>
-            </div>
-            <hr>
-            <div class="summary__addons">
-              <div class="summary__addons__item">
-                <p class="summary__p">Online service</p>
-                <p class="summary__p summary__p-blue">$1/mo</p>
-              </div>
-              <div class="summary__addons__item">
-                <p class="summary__p">Larger storage</p>
-                <p class="summary__p summary__p-blue">$2/mo</p>
-              </div>
-              <div class="summary__addons__item offscreen">
-                <p class="summary__p">Cumstomizable profile</p>
-                <p class="summary__p summary__p-blue">$2/mo</p>
-              </div>
-            </div>
-          </div>
-          <div class="total">
-            <p class="total__p">Total (per <span class="total__duration">month</span>)</p>
-            <p class="total__p total__p-blue" id="total">PRICE TOTAL</p>
-          </div>
-        </div>
-        <div class="card__bottom">
-          <button class="button" type="button" data-previous>Go Back</button>
-          <button class="button" type="button" data-confirm>Confirm</button>
-        </div>
-      </fieldset>
-      <div class="card" data-step>
-        <figure class="card__main thanksPage">
-          <img src="./assets/images/icon-thank-you.svg" alt="thank you icon" width="40" height="40">
-          <figcaption>
-            <h2 class="thanksPage__h2">Thank you!</h2>
-            <p class="thanksPage__p">Thanks For confirming your subscription!We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
-          </figcaption>
-        </figure>
+    <aside class="main__aside aside">
+      <div class="aside__step">
+        <span class="aside__span highlight">1</span>
+        <section class="aside__section offscreen">
+          <p class="aside__p">Step 1</p>
+          <h3 class="aside__h3">Your info</h3>
+        </section>
       </div>
-    </form>
+      <div class="aside__step">
+        <span class="aside__span">2</span>
+        <section class="aside__section offscreen">
+          <p class="aside__p">Step 2</p>
+          <h3 class="aside__h3">Select plan</h3>
+        </section>
+      </div>
+      <div class="aside__step">
+        <span class="aside__span">3</span>
+        <section class="aside__section offscreen">
+          <p class="aside__p">Step 3</p>
+          <h3 class="aside__h3">Add-ons</h3>
+        </section>
+      </div>
+      <div class="aside__step">
+        <span class="aside__span">4</span>
+        <section class="aside__section offscreen">
+          <p class="aside__p">Step 4</p>
+          <h3 class="aside__h3">Summary</h3>
+        </section>
+      </div>
+    </aside>
+    <section class="main__section">
+      <form class="main__form" data-multi-step>
+        <fieldset class="card active" data-step>
+          <div class="card__body">
+            <legend class="card__legend">
+              <h2>Personal info</h2>
+              <h3>Please provide your name, email address, and phone number.</h3>
+            </legend>
+            <div class="card__content content">
+              <div class="content__choice">
+                <label class="content__label" for="name"><h5>Name</h5></label>
+                <input 
+                class="content__input" 
+                type="text" 
+                name="name" 
+                id="name" 
+                placeholder="e.g. Stephen King" 
+                required
+                pattern="^[a-zA-Z ]*$"
+                >
+              </div>
+              <div class="content__choice">
+                <label class="content__label" for="email"><h5>Email Address</h5></label>
+                <input 
+                  class="content__input" 
+                  type="email" 
+                  name="email" 
+                  id="email" 
+                  placeholder="e.g. stephenking@lorem.com" 
+                  required
+                  pattern="^\w+@\w+.(com|cn)$"
+                >
+              </div>
+              <div class="content__choice">
+                <label class="content__label" for="phone"><h5>Phone Number</h5></label>
+                <input 
+                  class="content__input" 
+                  type="tel" name="phone" 
+                  id="phone" 
+                  placeholder="e.g. +1 234 567 890" 
+                  required
+                  pattern="^\+1(\s\d{3}){3}$"
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card__bottom">
+            <button class="button" type="button" data-next>Next Step</button>
+          </div>
+        </fieldset>
+        <fieldset class="card" data-step>
+          <div class="card__body">
+            <legend class="card__legend">
+              <h2>Select your plan</h2>
+              <h3>You have the option of monthly or yearly billing.</h3>
+            </legend>
+            <div class="card__content plan">
+              <figure class="plan__choice selected" data-plan>
+                <img src="./assets/images/icon-arcade.svg" alt="arcade icon" width="40" height="40">
+                <figcaption class="plan__figcaption">
+                  <h4 class="plan__h4">Arcade</h4>
+                  <p class="plan__p">$9/mo</p>
+                </figcaption>
+              </figure>
+              <figure class="plan__choice" data-plan>
+                <img src="./assets/images/icon-advanced.svg" alt="advanced icon" width="40" height="40">
+                <figcaption class="plan__figcaption">
+                  <h4 class="plan__h4">Advanced</h4>
+                  <p class="plan__p">$12/mo</p>
+                </figcaption>
+              </figure>
+              <figure class="plan__choice" data-plan>
+                <img src="./assets/images/icon-pro.svg" alt="pro icon" width="40" height="40">
+                <figcaption class="plan__figcaption">
+                  <h4 class="plan__h4">Pro</h4>
+                  <p class="plan__p">$15/mo</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="card__footer subscription">
+              <p class="subscription__p subscribed" data-subscription>Monthly</p>
+              <div class="subscription__button moved"><span class="subscription__span"></span></div>
+              <p class="subscription__p" data-subscription>Yearly</p>
+            </div>
+          </div>
+          <div class="card__bottom">
+            <button class="button" type="button" data-previous>Go Back</button>
+            <button class="button" type="button" data-next>Next Step</button>
+          </div>
+        </fieldset>
+        <fieldset class="card" data-step>
+          <div class="card__body">
+            <legend class="card__legend">
+              <h2>Pick add-ons</h2>
+              <h3>Add-ons help enhance your gaming experience.</h3>
+            </legend>
+            <div class="card__content addon">
+              <div class="addon__item picked">
+                <input class="addon__input" type="checkbox" id="onlineService" name="onlineService" checked>
+                <label class="addon__label" for="onlineService">
+                  <div class="addon__wrapper">
+                    <h4 class="addon__h4">Online service</h4>
+                    <p class="addon__p">Access to multiplayer games</p>
+                  </div>
+                  <p class="addon__p purplishBlue" data-addon-price>+$1/mo</p>
+                </label>
+              </div>
+              <div class="addon__item picked">
+                <input class="addon__input" type="checkbox" id="largeStorage" name="largeStorage" checked>
+                <label class="addon__label" for="largeStorage">
+                  <div class="addon__wrapper">
+                    <h4 class="addon__h4">Larger storage</h4>
+                    <p class="addon__p">Extra 1TB of cloud save</p>
+                  </div>
+                  <p class="addon__p purplishBlue" data-addon-price>+$2/mo</p>
+                </label>
+              </div>
+              <div class="addon__item">
+                <input class="addon__input" type="checkbox" id="customizableProfile" name="customizableProfile">
+                <label class="addon__label" for="customizableProfile">
+                  <div class="addon__wrapper">
+                    <h4 class="addon__h4">Customizable Profile</h4>
+                    <p class="addon__p">Custom theme on your profile</p>
+                  </div>
+                  <p class="addon__p purplishBlue" data-addon-price>+$2/mo</p>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="card__bottom">
+            <button class="button" type="button" data-previous>Go Back</button>
+            <button class="button" type="button" data-next>Next Step</button>
+          </div>
+        </fieldset>
+        <fieldset class="card " data-step>
+          <div class="card__body">
+            <legend class="card__legend">
+              <h2>Finishing up</h2>
+              <h3>Double-check everything looks OK before confirming.</h3>
+            </legend>
+            <div class="card__content summary">
+              <div class="summary__plan">
+                <div class="summary__plan__info">
+                  <p class="marineBlue medium">
+                    <span class="summary__plan__name">Arcade</span>(<span class="summary__plan__duration">Monthly</span>)
+                  </p>
+                  <p class="underline medium" data-change>Change</p>
+                </div>
+                <p class="marineBlue medium" id="planPrice">$9/mo</p>
+              </div>
+              <hr>
+              <div class="summary__addons">
+                <div class="summary__addons__item">
+                  <p>Online service</p>
+                  <p class="marineBlue">+$1/mo</p>
+                </div>
+                <div class="summary__addons__item">
+                  <p>Larger storage</p>
+                  <p class="marineBlue">+$2/mo</p>
+                </div>
+                <div class="summary__addons__item offscreen">
+                  <p>Cumstomizable profile</p>
+                  <p class="marineBlue">+$2/mo</p>
+                </div>
+              </div>
+            </div>
+            <div class="card__total">
+              <p>Total (per <span class="total__duration">month</span>)</p>
+              <p class="purplishBlue bold" id="total">PRICE TOTAL</p>
+            </div>
+          </div>
+          <div class="card__bottom">
+            <button class="button" type="button" data-previous>Go Back</button>
+            <button class="button" type="button" data-confirm>Confirm</button>
+          </div>
+        </fieldset>
+        <div class="card" data-step>
+          <figure class="card__body thanksPage">
+            <img class="thanksPage__image" src="./assets/images/icon-thank-you.svg" alt="thank you icon">
+            <figcaption>
+              <h2 class="thanksPage__h2">Thank you!</h2>
+              <p class="thanksPage__p">Thanks For confirming your subscription!We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </form>
+    </section>
   </main>
 </body>
 </html>

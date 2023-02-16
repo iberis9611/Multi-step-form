@@ -1,5 +1,69 @@
 @use '../utils' as u;
 
-p {
+h2 {
+    font-size: u.rem(18);
+    color: hsl(213, 96%, 18%);
+
+    @include u.breakpoint(medium) {
+        font-size: u.rem(24);
+    }
+}
+
+h3 {
+    font-size: u.rem(14);
+    font-weight: 400;
     color: hsl(231, 11%, 63%);
+}
+
+h4 {
+    font-size: u.rem(13);
+    font-weight: 500;
+    color: hsl(213, 96%, 18%);
+}
+
+h5 {
+    font-size: u.rem(10);
+    font-weight: 400;
+    color: hsl(213, 96%, 18%);
+
+    @include u.breakpoint(medium) {
+        font-size: u.rem(12);
+    }
+}
+
+p {
+    font-size: u.rem(12);
+    color: hsl(231, 11%, 63%);
+}
+
+.marineBlue {
+    color: hsl(213, 96%, 18%);
+}
+
+.purplishBlue {
+    color: hsl(243, 100%, 62%);
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.underline:hover, .underline:focus  {
+    cursor: pointer;
+    color: hsl(243, 100%, 62%);
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+
+.offscreen {
+    position: absolute;
+    left: -10000px;
 }

@@ -12,6 +12,18 @@
     background-size: cover;
     background-position: center;
 
+    @include u.breakpoint(medium) { 
+        border-radius: u.rem(10);
+        height: 100%;
+        flex-direction: column;
+        gap: u.rem(32);
+        justify-content: flex-start;
+        padding-top: u.rem(38);
+        padding-inline: u.rem(16);
+        width: 30%;
+        background-image: url("../../assets/images/bg-sidebar-desktop.svg");
+    }
+
     &__span {
         display: block;
         background-color: transparent;
@@ -26,7 +38,24 @@
     }
 
     &__section {
-        display: none;
+        position: absolute;
+        left: u.rem(-10000);
+
+        @include u.breakpoint(medium) { 
+            position: static;
+        }
+    }
+
+    &__step {
+        @include u.breakpoint(medium) { 
+            display: flex;
+            gap: u.rem(16);
+        }
+    }
+
+    &__h3 {
+        color: hsl(0, 0%, 100%);
+        font-weight: 700;
     }
 }
 

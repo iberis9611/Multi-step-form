@@ -5,7 +5,35 @@
     text-align: center;
     padding-block: u.rem(80);
     gap: 0;
+
+    @include u.breakpoint(medium) {
+        width: u.rem(430);
+        height: 100%;
+        justify-content: center;
+    }
+
+    &__image {
+        width: u.rem(40);
+
+        @include u.breakpoint(medium) {
+            width: u.rem(80);
+        }
+    }
+
     &__h2 {
         padding-block: u.rem(26) u.rem(18);
+
+        @include u.breakpoint(medium) {
+            line-height: u.rem(26);
+            padding-block: u.rem(32) u.rem(20);
+        }
+    }
+
+    &__p {
+        line-height: u.rem(24);
+        font-size: u.rem(14);
+
+        @include u.breakpoint(medium) {
+        }
     }
 }

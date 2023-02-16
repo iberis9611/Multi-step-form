@@ -1,14 +1,14 @@
 @use '../utils' as u;
 
 .content {
-    display: flex;
-    flex-direction: column;
-    gap: u.rem(10);
-
     &__choice {
         display: flex;
         flex-direction: column;
-        gap: u.rem(5);
+        gap: u.rem(4);
+
+        @include u.breakpoint(medium) { 
+            gap: u.rem(12);
+        } 
     }
 
     &__input {
@@ -22,8 +22,12 @@
     }
 
     &__label {
-        color: hsl(213, 96%, 18%);
         display: flex;
         justify-content: space-between;
+        font-size: u.rem(10);
+
+        @include u.breakpoint(medium) {
+            font-size: u.rem(12);
+        }
     }
 }

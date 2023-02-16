@@ -9,6 +9,11 @@
     justify-content: space-between;
     align-items: center;
 
+    @include u.breakpoint(medium) { 
+        justify-content: center;
+        gap: u.rem(24);
+    }
+
     &__button {
         width: u.rem(38);
         height: u.rem(20);
@@ -33,11 +38,6 @@
         transform: scale(1.2) translateX(u.rem(1));
         transition-duration: 0.2s;
         transition-timing-function: linear;
-    }
-
-
-    &__p {
-        color: hsl(231, 11%, 63%);
     }
 }
 

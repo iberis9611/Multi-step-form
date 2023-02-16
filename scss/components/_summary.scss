@@ -9,6 +9,11 @@
     flex-direction: column;
     gap: u.rem(14);
 
+    @include u.breakpoint(medium) { 
+        padding: u.rem(22) u.rem(24);
+        gap: u.rem(24);
+    } 
+
     &__plan {
         display: flex;
         align-items: center;
@@ -17,7 +22,7 @@
         &__info {
             display: flex;
             flex-direction: column;
-            gap: u.rem(10);
+            gap: u.rem(8);
         }
     }
 
@@ -33,31 +38,10 @@
             align-items: center;
         }
     }
-
-    &__p {
-        font-size: u.rem(12);
-
-        &-blue {
-            color: hsl(213, 96%, 18%);
-        }
-
-        &-blue-bold {
-            color: hsl(213, 96%, 18%);
-            font-weight: 700;
-        }
-
-        &-underline {
-            text-decoration: underline;
-        }
-
-        &-underline:hover, &-underline:focus  {
-            cursor: pointer;
-            color: hsl(243, 100%, 62%);
-        }
-    }
 }
 
-.offscreen {
-    position: absolute;
-    left: -10000px;
+#total {
+    @include u.breakpoint(medium) { 
+       font-size: u.rem(18);
+    } 
 }

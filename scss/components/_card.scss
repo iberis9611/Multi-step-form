@@ -7,8 +7,18 @@
     transform: translateX(200%);
     opacity: 0;
 
-    &__main {
-        width: calc(100% - u.rem(15));
+    @include u.breakpoint(medium) { 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: u.rem(452);
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+    }
+
+    &__body {
+        width: clamp(u.rem(292), calc(100% - u.rem(24)), u.rem(450));
         position: absolute;
         top: u.rem(96);
         left: 0;
@@ -23,6 +33,15 @@
         display: flex;
         flex-direction: column;
         gap: u.rem(24);
+
+        @include u.breakpoint(medium) { 
+            position: static;
+            width: 100%;
+            background-color: transparent;
+            box-shadow: none;
+            padding: 0;
+            gap: u.rem(26);
+        }
     }
 
     &__bottom {
@@ -34,6 +53,42 @@
         background-color: hsl(0, 0%, 100%);
         display: grid;
         grid-template-columns: 1fr 1fr;
+
+        @include u.breakpoint(medium) { 
+            position: static;
+            padding: 0;
+        }
+    }
+
+    &__legend {
+        display: flex;
+        flex-direction: column;
+        gap: u.rem(14);
+
+        @include u.breakpoint(medium) { 
+            margin-bottom: u.rem(14);
+        }
+    }
+
+    &__total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: u.rem(12);
+
+        @include u.breakpoint(medium) { 
+         padding-inline: u.rem(18);
+        }   
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: u.rem(10);
+    
+        @include u.breakpoint(medium) { 
+            gap: u.rem(24);
+        }   
     }
 }
 

@@ -25,17 +25,28 @@ body {
     background-color: hsl(217, 100%, 97%);
     display: flex;
     flex-direction: column;
+
+    @include u.breakpoint(medium) {
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 button {
-    padding: u.rem(15) u.rem(16);
+    width: u.rem(97);
+    height: u.rem(40);
     border: 1px solid transparent;
     border-radius: u.rem(4);
     color: hsl(0, 0%, 100%);
+    font-size: u.rem(12);
+
+    @include u.breakpoint(medium) { 
+        width: u.rem(123);
+        height: u.rem(48);
+    } 
 }
 
 button:hover, button:focus {
-    opacity: .7;
     transition-duration: 0.2s;
     transition-timing-function: linear;
     cursor: pointer;
@@ -43,17 +54,30 @@ button:hover, button:focus {
 
 button[data-confirm] {
     background-color: hsl(243, 100%, 62%);
+    justify-self: end;
+}
+
+button[data-confirm]:hover, button[data-confirm]:focus {
+    opacity: .7;
 }
 
 button[data-previous] {
     background-color: transparent;
     color: hsl(231, 11%, 63%);
-    
+}
+
+button[data-previous]:hover, button[data-previous]:focus {
+    color: hsl(213, 96%, 18%);
 }
 
 button[data-next] {
     background-color: hsl(213, 96%, 18%);
     grid-column: 2 / 3;
+    justify-self: end;
+}
+
+button[data-next]:hover, button[data-next]:focus {
+    background-color: hsl(213, 96%, 28%);
 }
 
 fieldset {
@@ -68,4 +92,10 @@ input[type=checkbox] {
 
 input[type=checkbox]:hover,[type=checkbox]:focus {
     cursor: pointer;
+}
+
+hr {
+    border: none;
+    height: u.rem(0.5);
+    background-color: hsl(229, 24%, 87%);
 }

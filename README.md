@@ -38,12 +38,25 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![step-1-mobile](./assets/screenshots/step-1-mobile.png)
+![step-1-active-mobile](./assets/screenshots/step-1-mobile-active.png)
+![step-2-monthly-mobile](./assets/screenshots/step-2-monthly-mobile.png)
+![step-2-yearly-mobile](./assets/screenshots/step-2-yearly-mobile.png)
+![step-3-monthly-mobile](./assets/screenshots/step-3-monthly-mobile.png)
+![step-3-yearly-mobile](./assets/screenshots/step-3-yearly-mobile.png)
+![step-4-monthly-mobile](./assets/screenshots/step-4-monthly-mobile.png)
+![step-4-yearly-mobile](./assets/screenshots/step-4-yearly-mobile.png)
+![step-5-mobile](./assets/screenshots/step-5-mobile.png)
+![step-1-desktop](./assets/screenshots/step-1-desktop.png)
+![step-2-desktop](./assets/screenshots/step-2-desktop.png)
+![step-3-desktop](./assets/screenshots/step-3-desktop.png)
+![step-4-desktop](./assets/screenshots/step-4-desktop.png)
+![step-5-desktop](./assets/screenshots/step-5-desktop.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Multi-step form solution](https://github.com/iberis9611/Multi-step-form)
+- Live Site URL: [Multi-step form live site](https://iberis9611.github.io/Multi-step-form/)
 
 ## My process
 
@@ -54,11 +67,12 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [Styled Components](https://styled-components.com/) - For styles
+- [SASS](https://sass-lang.com/) - For styles
+- [BEM](https://getbem.com/) - For reusable components
 
 ### What I learned
 
-1. Using data attributes
+1. HTML data-* attributes
 ```html
  <form class="main__form" data-multi-step>
   <fieldset class="card active" data-step></fieldset>
@@ -119,27 +133,33 @@ input[type=checkbox] {
 }
 ```
 
-5. querySelectorAll() will return a nodeList, we need to convert it to array in order to iterate over it.
+5. Document.querySelectorAll(): returns a nodeList, we need to convert it to array in order to iterate over it.
 ```js
 const formSteps = [...multiStepForm.querySelectorAll("[data-step]")];
 ```
 
-6. findIndex()
+6. Array.prototype.findIndex(): The findIndex() method returns the index of the first element in an array that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned.
 ```js
 let currentStep = formSteps.findIndex((step, index) => {
     return step.classList.contains("active");
 })
 ```
 
-7. matches()
+7. Array.prototype.every(): The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
+```js
+const inputs = [...formSteps[currentStep].querySelectorAll("input")];
+```
 
-8. every()
+8. HTMLInputElement.checkValidity(): returns a boolean value which indicates validity of the value of the element. If the value is invalid, this method also fires the invalid event on the element.
+```js
+const allValid = inputs.every(input => input.checkValidity());
+if (allValid) {
+    currentStep += 1;
+    showCurrentStep();
+}
+```
 
-9. checkValidity()
-
-10. place element in grids
-
-11. overflow:hidden - hide absolute items that are positioned out of viewport.
+9. overflow:hidden - hide absolute items that are positioned out of viewport.
 ```scss
 &__form {
     height: inherit;
@@ -148,7 +168,7 @@ let currentStep = formSteps.findIndex((step, index) => {
 }
 ```
 
-12. Use regular expression in html with the pattern attribute of input.
+10. Use regular expression in html with the pattern attribute of input.
 ```html
 <input 
   class="content__input" 
@@ -161,7 +181,7 @@ let currentStep = formSteps.findIndex((step, index) => {
 >
 ```
 
-13.  check - check if a checkbox is checked.
+11. checked - check if a checkbox is checked.
 ```js
 const addons = [...document.querySelectorAll(".addon")];
 addons.forEach(addon => {
@@ -171,7 +191,7 @@ addons.forEach(addon => {
 })
 ```
 
-14.  String.prototype.match(): Retrieves the result of matching a string against a regular expression. Returns a string Array whose contents depend on the presence or absence of the global (g) flag, or null if no matches are found.
+12. String.prototype.match(): Retrieves the result of matching a string against a regular expression. Returns a string Array whose contents depend on the presence or absence of the global (g) flag, or null if no matches are found.
 ```js
 // Calculate the total price upon clicking on the last 'next step' button
 if (index === 2) {
@@ -193,16 +213,44 @@ if (index === 2) {
 }
 ```
 
-15. Note: 
+13. How to change the color of hr
+```css
+hr {
+    border: none;
+    height: 0.5rem;
+    background-color: hsl(229, 24%, 87%);
+}
+```
+
+14. CSS comparison function clamp(): Calculates the central of a minimum, central, and maximum values.
+```scss
+&__body {
+  width: clamp(u.rem(292), calc(100% - u.rem(24)), u.rem(450));
+}
+```
+
+15. CSS justify-self property: sets the way a box is justified inside its alignment container along the appropriate axis.
+- In grid/block-level/absolutely-positioned elements layouts, it aligns an item inside its grid area/containing block on the inline axis. 
+- In flexbox and table cell layouts, this property is ignored.
+```scss
+button[data-next] {
+  background-color: hsl(213, 96%, 18%);
+  grid-column: 2 / 3;
+  justify-self: end;
+}
+```
+
+- Note: 
 Element.querySelector() returns an element.
 Element.querySelectorAll() returns a static (not live) NodeList.
 Element.getElementsByTagName() returns a live HTMLCollection.
 
 ### Continued development
 
-Add desktop desgin
-Add dark mode
-Optimize UI design
+- Use ttf fonts file
+- Update checkbox border style
+- Add slide animation
+- Add dark mode
 
 ### Useful resources
 
