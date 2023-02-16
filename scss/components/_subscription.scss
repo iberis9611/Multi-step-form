@@ -1,7 +1,7 @@
 @use '../utils' as u;
 
 .subscription {
-    background-color: hsla(218, 10%, 77%, 0.1);
+    background-color: var(--sub-bgcolor);
     padding-block: u.rem(13);
     padding-inline: u.rem(52); 
     border-radius: u.rem(8);
@@ -19,7 +19,7 @@
         height: u.rem(20);
         padding-inline: u.rem(4);
         border-radius: u.rem(15);
-        background-color: hsl(213, 96%, 18%);
+        background-color: var(--sub-btn-bgcolor);
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -27,7 +27,7 @@
 
     &__span {
         display: block;
-        background-color: hsl(0, 0%, 100%);
+        background-color: var(--sub-btn-color);
         border-radius: 50%;
         width: u.rem(12);
         height: u.rem(12);
@@ -42,7 +42,7 @@
 }
 
 .subscribed {
-    color: hsl(213, 96%, 18%);
+    color: var(--sub-text-color);
 }
 
 .moved {

@@ -62,7 +62,7 @@ allInputs.forEach((input) => {
                 // Remove the error message
                 prevEleSib.childNodes[1].remove();
             }
-            input.style.borderColor = '#1D84B5';
+            input.style.borderColor = 'hsl(243, 100%, 62%)';
         } else {
             promptError(input);
         }
@@ -126,8 +126,7 @@ roundBtn.addEventListener("click", e => {
         // Append p element of '2 months free'
         plansInfo.forEach(info => {
             const discount = document.createElement("p");
-            discount.style.fontSize = 0.75 + "rem";
-            discount.style.color = "hsl(213, 96%, 18%)";
+            discount.classList.add("marineBlue");
             const discountText = document.createTextNode("2 months free");
             discount.appendChild(discountText);
             info.appendChild(discount)

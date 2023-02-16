@@ -32,8 +32,5 @@
     &__p {
         line-height: u.rem(24);
         font-size: u.rem(14);
-
-        @include u.breakpoint(medium) {
-        }
     }
 }

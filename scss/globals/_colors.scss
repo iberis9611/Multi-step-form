@@ -1,0 +1,84 @@
+:root {
+    --bgcolor: hsl(217, 100%, 97%);
+    --btn-color: hsl(0, 0%, 100%);
+    --previous-btn-color: hsl(231, 11%, 63%);
+    --previous-btn-hover-color: hsl(213, 96%, 18%);
+    --confirm-btn-bgcolor: hsl(243, 100%, 62%);
+    --next-btn-bgcolor: hsl(213, 96%, 18%);
+    --next-btn-hover-bgcolor: hsl(213, 96%, 28%);
+    --checkbox-accent-color: hsl(243, 100%, 62%);
+    --hr-bgcolor: hsl(229, 24%, 87%);
+    --h2-color: hsl(213, 96%, 18%);
+    --h3-color: hsl(231, 11%, 63%);
+    --h4-color: hsl(213, 96%, 18%);
+    --h5-color: hsl(213, 96%, 18%);
+    --p-color: hsl(231, 11%, 63%);
+    --input-bgcolor: hsl(0, 0%, 100%);
+    --input-color: hsl(0, 0%, 0%);
+    --placeholder-color: hsl(231, 11%, 63%);
+    --underline-hover-color: hsl(243, 100%, 62%);
+    --border-color: hsl(229, 24%, 87%);
+    --input-border-color: hsl(229, 24%, 87%);
+    --border-hover-color: hsl(243, 100%, 62%);
+    --border-selected-color: hsl(243, 100%, 62%);
+    --selected-bgcolor: hsla(243, 100%, 62%, 0.02);
+    --sub-btn-bgcolor: hsl(213, 96%, 18%);
+    --sub-btn-color: hsl(0, 0%, 100%);
+    --sub-text-color: hsl(213, 96%, 18%);
+    --sub-bgcolor: hsla(218, 10%, 77%, 0.1);
+    --sum-bgcolor: hsla(218, 10%, 77%, 0.1);
+    --aside-mask-color: hsla(0, 0%, 0%, 0);
+    --aside-roundspan-color: hsl(0, 0%, 100%);
+    --aside-roundspan-border-color: hsl(0, 0%, 100%);
+    --aside-roundspan-highlight-color: hsl(0, 0%, 0%);
+    --aside-roundspan-highlight-bg-color: hsl(206, 94%, 87%);
+    --aside-h3-color: hsl(0, 0%, 100%);
+    --main-bgcolor: hsl(0, 0%, 100%);
+    --card-body-bgcolor: hsl(231, 100%, 99%);
+    --card-boxshadow-color: hsla(0, 0%, 27%, 0.2);
+    --card-bottom-bgcolor: hsl(0, 0%, 100%);
+    --marineblue-color: hsl(213, 96%, 18%);
+    --purplishblue-color: hsl(243, 100%, 62%);
+
+    --aside-mobile-bg-image: url("../../assets/images/bg-sidebar-mobile.svg");
+    --aside-desktop-bg-image: url("../../assets/images/bg-sidebar-desktop.svg");
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bgcolor: #121212;
+        --card-body-bgcolor: hsl(0, 0%, 0%);
+        --card-bottom-bgcolor: hsl(0, 0%, 0%);
+        --btn-color: hsl(0, 0%, 0%);
+        --previous-btn-color: hsla(0, 0%, 100%, 0.6);
+        --previous-btn-hover-color: hsl(243, 100%, 62%);
+        --next-btn-bgcolor: hsla(0, 0%, 100%, 0.87);
+        --next-btn-hover-bgcolor: hsl(243, 100%, 62%);
+        --hr-bgcolor: hsla(0, 0%, 100%, 0.15);
+        --h2-color: hsla(0, 0%, 100%, 0.87);
+        --h3-color: hsla(0, 0%, 100%, 0.38);
+        --h4-color: hsla(0, 0%, 100%, 0.87);
+        --h5-color: hsla(0, 0%, 100%, 0.87);
+        --p-color: hsla(0, 0%, 100%, 0.38);
+        --border-color: hsla(0, 0%, 100%, 0.38);
+        --input-border-color: hsla(229, 24%, 87%, 0);
+        --input-bgcolor: hsla(218, 10%, 77%, 0.1);
+        --input-color: hsla(0, 0%, 100%, 0.87);
+        --placeholder-color: hsla(0, 0%, 100%, 0.38);
+        --selected-bgcolor: #161616;
+        --sub-btn-bgcolor: hsl(243, 100%, 62%);
+        --sub-btn-color: hsla(0, 0%, 100%, 0.87);
+        --sub-text-color: hsla(0, 0%, 100%, 0.87);
+        --aside-mask-color: hsla(0, 0%, 0%, 0.66);
+        --aside-roundspan-color: hsl(0, 0%, 100%, 0.87);
+        --aside-roundspan-border-color: hsl(0, 0%, 100%, 0.87);
+        --aside-roundspan-highlight-color: hsla(0, 0%, 0%, 0.87);
+        --aside-roundspan-highlight-bg-color: hsla(0, 0%, 100%, 0.87);
+        --aside-h3-color: hsla(0, 0%, 100%, 0.87);
+        --main-bgcolor: hsl(0, 0%, 0%);
+        --marineblue-color: hsla(0, 0%, 100%, 0.87);
+
+        --aside-mobile-bg-image: url("../../assets/images/bg-sidebar-mobile-dark.jpg");
+        --aside-desktop-bg-image: url("../../assets/images/bg-sidebar-desktop-dark.jpg");
+    }
+}

@@ -1,7 +1,7 @@
 @use '../utils' as u;
 
 .summary {
-    background-color: hsla(218, 10%, 77%, 0.1);
+    background-color: var(--sum-bgcolor);
     border-radius: u.rem(8);
     padding-inline: u.rem(15);
     padding-block: u.rem(20);

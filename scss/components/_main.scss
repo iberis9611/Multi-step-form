@@ -6,7 +6,7 @@
     @include u.breakpoint(medium) {
         width: min(calc(100% - u.rem(16)), u.rem(940));
         height: u.rem(600);
-        background-color: hsl(0, 0%, 100%);
+        background-color: var(--main-bgcolor);
         border-radius: u.rem(16);
         display: flex;
         padding: u.rem(16);

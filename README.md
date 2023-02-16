@@ -16,9 +16,6 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
     - [Continued development](#continued-development)
     - [Useful resources](#useful-resources)
   - [Author](#author)
-  - [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -40,18 +37,28 @@ Users should be able to:
 
 ![step-1-mobile](./assets/screenshots/step-1-mobile.png)
 ![step-1-active-mobile](./assets/screenshots/step-1-mobile-active.png)
+![step-1-mobile-dark-mode](./assets/screenshots/step-1-mobile-dark-mode.png)
 ![step-2-monthly-mobile](./assets/screenshots/step-2-monthly-mobile.png)
 ![step-2-yearly-mobile](./assets/screenshots/step-2-yearly-mobile.png)
+![step-2-mobile-dark-mode](./assets/screenshots/step-2-mobile-dark-mode.png)
 ![step-3-monthly-mobile](./assets/screenshots/step-3-monthly-mobile.png)
 ![step-3-yearly-mobile](./assets/screenshots/step-3-yearly-mobile.png)
+![step-3-mobile-dark-mode](./assets/screenshots/step-3-mobile-dark-mode.png)
 ![step-4-monthly-mobile](./assets/screenshots/step-4-monthly-mobile.png)
 ![step-4-yearly-mobile](./assets/screenshots/step-4-yearly-mobile.png)
+![step-4-mobile-dark-mode](./assets/screenshots/step-4-mobile-dark-mode.png)
 ![step-5-mobile](./assets/screenshots/step-5-mobile.png)
+![step-5-mobile-dark-mode](./assets/screenshots/step-5-mobile-dark-mode.png)
 ![step-1-desktop](./assets/screenshots/step-1-desktop.png)
+![step-1-desktop-dark-mode-active](./assets/screenshots/step-1-desktop-dark-mode-active.png)
 ![step-2-desktop](./assets/screenshots/step-2-desktop.png)
+![step-2-desktop-dark-mode](./assets/screenshots/step-2-desktop-dark-mode.png)
 ![step-3-desktop](./assets/screenshots/step-3-desktop.png)
+![step-3-desktop-dark-mode](./assets/screenshots/step-3-desktop-dark-mode.png)
 ![step-4-desktop](./assets/screenshots/step-4-desktop.png)
+![step-4-desktop-dark-mode-active](./assets/screenshots/step-4-desktop-dark-mode-active.png)
 ![step-5-desktop](./assets/screenshots/step-5-desktop.png)
+![step-5-desktop-dark-mode](./assets/screenshots/step-5-desktop-dark-mode.png)
 
 ### Links
 
@@ -247,19 +254,14 @@ Element.getElementsByTagName() returns a live HTMLCollection.
 
 ### Continued development
 
-- Use ttf fonts file
-- Update checkbox border style
-- Add slide animation
-- Add dark mode
+- Update checkbox style
+- Update input fill-in background
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Can I Create This Complex Animated Multistep Form?](https://www.youtube.com/watch?v=VdqtdKXxKhM&list=LL&index=15) - This is an amazing video which helped me finally understand how to build a multi-step form on a single page. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
 - Website - [Oliver C.](https://github.com/iberis9611)
 - Frontend Mentor - [@iberis9611](https://www.frontendmentor.io/profile/iberis9611)
-
-## Acknowledgments

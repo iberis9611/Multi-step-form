@@ -8,7 +8,7 @@
     }
 
     &__choice {
-        border: u.rem(1) solid hsl(229, 24%, 87%);
+        border: u.rem(1) solid var(--border-color);
         border-radius: u.rem(8);
         padding: u.rem(16);
         display: flex;
@@ -24,6 +24,13 @@
         }
     }
 
+    &__choice:hover, &__choice:focus {
+        cursor: pointer;
+        border-color: var(--border-hover-color);
+        transition-duration: 0.2s;
+        transition-timing-function: linear;
+    }
+
     &__figcaption {
         display: flex;
         flex-direction: column;
@@ -32,11 +39,7 @@
     }
 }
 
-.plan:hover, .plan:focus {
-    cursor: pointer;
-}
-
 .selected {
-    border: u.rem(1) solid hsl(243, 100%, 62%);
-    background-color: hsla(243, 100%, 62%, 0.02);
+    border-color: var(--border-selected-color);
+    background-color: var(--selected-bgcolor);
 }

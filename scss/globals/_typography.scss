@@ -2,7 +2,7 @@
 
 h2 {
     font-size: u.rem(18);
-    color: hsl(213, 96%, 18%);
+    color: var(--h2-color);
 
     @include u.breakpoint(medium) {
         font-size: u.rem(24);
@@ -12,19 +12,19 @@ h2 {
 h3 {
     font-size: u.rem(14);
     font-weight: 400;
-    color: hsl(231, 11%, 63%);
+    color: var(--h3-color);
 }
 
 h4 {
     font-size: u.rem(13);
     font-weight: 500;
-    color: hsl(213, 96%, 18%);
+    color: var(--h4-color);
 }
 
 h5 {
     font-size: u.rem(10);
     font-weight: 400;
-    color: hsl(213, 96%, 18%);
+    color: var(--h5-color);
 
     @include u.breakpoint(medium) {
         font-size: u.rem(12);
@@ -33,15 +33,15 @@ h5 {
 
 p {
     font-size: u.rem(12);
-    color: hsl(231, 11%, 63%);
+    color: var(--p-color);
 }
 
 .marineBlue {
-    color: hsl(213, 96%, 18%);
+    color: var(--marineblue-color);
 }
 
 .purplishBlue {
-    color: hsl(243, 100%, 62%);
+    color: var(--purplishblue-color);
 }
 
 .bold {
@@ -58,7 +58,7 @@ p {
 
 .underline:hover, .underline:focus  {
     cursor: pointer;
-    color: hsl(243, 100%, 62%);
+    color: var(--underline-hover-color);
     transition-duration: 0.2s;
     transition-timing-function: linear;
 }

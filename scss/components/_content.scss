@@ -12,13 +12,15 @@
     }
 
     &__input {
-        border: 1px solid hsl(229, 24%, 87%);
+        border: u.rem(1) solid var(--input-border-color);
         border-radius: u.rem(4);
         padding: u.rem(15);
+        background-color: var(--input-bgcolor);
+        color: var(--input-color);
     }
 
     &__input::placeholder {
-        color: hsl(231, 11%, 63%);
+        color: var(--placeholder-color);
     }
 
     &__label {

@@ -1,13 +1,12 @@
 @use '../utils' as u;
 
 .addon {
-
     @include u.breakpoint(medium) {
         gap: u.rem(16);
     }
 
     &__item {
-        border: u.rem(1) solid hsl(229, 24%, 87%);
+        border: u.rem(1) solid var(--border-color);
         border-radius: u.rem(8);
         padding: u.rem(16);
         display: flex;
@@ -19,6 +18,13 @@
             padding: u.rem(22) u.rem(24);
             gap: u.rem(24);
         }
+    }
+
+    &__item:hover, &__item:focus, &__label:hover, &__label:focus {
+        cursor: pointer;
+        border-color: var(--border-hover-color);
+        transition-duration: 0.2s;
+        transition-timing-function: linear;
     }
     
     &__label {
@@ -38,14 +44,7 @@
     }
 }
 
-.addon:hover, .addon:focus, .addon__label:hover, .addon__label:focus {
-    cursor: pointer;
-    border-color: hsl(243, 100%, 62%);
-    transition-duration: 0.2s;
-    transition-timing-function: linear;
-}
-
 .picked {
-    border: u.rem(1) solid hsl(243, 100%, 62%);
-    background-color: hsla(243, 100%, 62%, 0.02);
+    border-color:  var(--border-selected-color);
+    background-color: var(--selected-bgcolor);
 }

@@ -1,13 +1,8 @@
 @use '../utils' as u;
 
 .aside {
-    height: u.rem(171);
-    display: flex;
-    justify-content: center;
-    gap: u.rem(16);
-    padding-top: u.rem(32);   
-    padding-bottom: u.rem(106); 
-    background-image: url("../../assets/images/bg-sidebar-mobile.svg");
+    height: u.rem(171); 
+    background-image: var(--aside-mobile-bg-image);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -15,13 +10,26 @@
     @include u.breakpoint(medium) { 
         border-radius: u.rem(10);
         height: 100%;
-        flex-direction: column;
-        gap: u.rem(32);
-        justify-content: flex-start;
-        padding-top: u.rem(38);
-        padding-inline: u.rem(16);
         width: 30%;
-        background-image: url("../../assets/images/bg-sidebar-desktop.svg");
+        background-image: var(--aside-desktop-bg-image);
+    }
+
+    &__body {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        gap: u.rem(16);
+        padding-top: u.rem(32);   
+        padding-bottom: u.rem(106); 
+        background-color: var(--aside-mask-color);
+
+        @include u.breakpoint(medium) {
+            flex-direction: column;
+            gap: u.rem(32);
+            justify-content: flex-start;
+            padding-top: u.rem(38);
+            padding-inline: u.rem(16);
+        }
     }
 
     &__span {
@@ -29,8 +37,8 @@
         background-color: transparent;
         width: u.rem(32);
         height: u.rem(32);
-        border: u.rem(1) solid hsl(0, 0%, 100%);
-        color: hsl(0, 0%, 100%);
+        border: u.rem(1) solid var(--aside-roundspan-border-color);
+        color: var(--aside-roundspan-color);
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -54,12 +62,12 @@
     }
 
     &__h3 {
-        color: hsl(0, 0%, 100%);
+        color: var(--aside-h3-color);
         font-weight: 700;
     }
 }
 
 .highlight {
-    background-color: hsl(206, 94%, 87%);
-    color: hsl(0, 0%, 0%);
+    background-color: var(--aside-roundspan-highlight-bg-color);
+    color: var(--aside-roundspan-highlight-color);
 }

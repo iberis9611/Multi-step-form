@@ -22,7 +22,7 @@ image {
 body {
     height: max(u.rem(600), 100vh);
     font: u.rem(16) u.$font;
-    background-color: hsl(217, 100%, 97%);
+    background-color: var(--bgcolor);
     display: flex;
     flex-direction: column;
 
@@ -37,7 +37,7 @@ button {
     height: u.rem(40);
     border: 1px solid transparent;
     border-radius: u.rem(4);
-    color: hsl(0, 0%, 100%);
+    color: var(--btn-color);
     font-size: u.rem(12);
 
     @include u.breakpoint(medium) { 
@@ -53,7 +53,7 @@ button:hover, button:focus {
 }
 
 button[data-confirm] {
-    background-color: hsl(243, 100%, 62%);
+    background-color: var(--confirm-btn-bgcolor);
     justify-self: end;
 }
 
@@ -63,21 +63,21 @@ button[data-confirm]:hover, button[data-confirm]:focus {
 
 button[data-previous] {
     background-color: transparent;
-    color: hsl(231, 11%, 63%);
+    color: var(--previous-btn-color);
 }
 
 button[data-previous]:hover, button[data-previous]:focus {
-    color: hsl(213, 96%, 18%);
+    color: var(--previous-btn-hover-color);
 }
 
 button[data-next] {
-    background-color: hsl(213, 96%, 18%);
+    background-color: var(--next-btn-bgcolor);
     grid-column: 2 / 3;
     justify-self: end;
 }
 
 button[data-next]:hover, button[data-next]:focus {
-    background-color: hsl(213, 96%, 28%);
+    background-color: var(--next-btn-hover-bgcolor);
 }
 
 fieldset {
@@ -85,7 +85,7 @@ fieldset {
 }
 
 input[type=checkbox] {
-    accent-color: hsl(243, 100%, 62%);
+    accent-color: var(--checkbox-accent-color);
     width: u.rem(20);
     height: u.rem(20);
 }
@@ -97,5 +97,5 @@ input[type=checkbox]:hover,[type=checkbox]:focus {
 hr {
     border: none;
     height: u.rem(0.5);
-    background-color: hsl(229, 24%, 87%);
+    background-color: var(--hr-bgcolor);
 }
