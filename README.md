@@ -252,6 +252,8 @@ Element.querySelector() returns an element.
 Element.querySelectorAll() returns a static (not live) NodeList.
 Element.getElementsByTagName() returns a live HTMLCollection.
 
+Element "h5" not allowed as child of element "label" in this context
+
 ### Continued development
 
 - Update checkbox style

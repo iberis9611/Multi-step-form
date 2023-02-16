@@ -40,8 +40,8 @@
     --marineblue-color: hsl(213, 96%, 18%);
     --purplishblue-color: hsl(243, 100%, 62%);
 
-    --aside-mobile-bg-image: url("../../images/bg-sidebar-mobile.svg");
-    --aside-desktop-bg-image: url("../../images/bg-sidebar-desktop.svg");
+    --aside-mobile-bg-image: url("../images/bg-sidebar-mobile.svg");
+    --aside-desktop-bg-image: url("../images/bg-sidebar-desktop.svg");
 }
 
 @media (prefers-color-scheme: dark) {
@@ -78,7 +78,7 @@
         --main-bgcolor: hsl(0, 0%, 0%);
         --marineblue-color: hsla(0, 0%, 100%, 0.87);
 
-        --aside-mobile-bg-image: url("../../images/bg-sidebar-mobile-dark.jpg");
-        --aside-desktop-bg-image: url("../../images/bg-sidebar-desktop-dark.jpg");
+        --aside-mobile-bg-image: url("../images/bg-sidebar-mobile-dark.jpg");
+        --aside-desktop-bg-image: url("../images/bg-sidebar-desktop-dark.jpg");
     }
 }

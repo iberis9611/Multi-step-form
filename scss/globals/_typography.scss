@@ -21,16 +21,6 @@ h4 {
     color: var(--h4-color);
 }
 
-h5 {
-    font-size: u.rem(10);
-    font-weight: 400;
-    color: var(--h5-color);
-
-    @include u.breakpoint(medium) {
-        font-size: u.rem(12);
-    }
-}
-
 p {
     font-size: u.rem(12);
     color: var(--p-color);
