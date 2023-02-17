@@ -17,6 +17,22 @@
         padding: u.rem(15);
         background-color: var(--input-bgcolor);
         color: var(--input-color);
+        caret-color: var(--purplishblue-color);
+        outline: none;
+    }
+
+    input:focus {
+        box-shadow: 0 0 8px 0 var(--purplishblue-color);
+        transition-duration: 0.1s;
+        transition-timing-function: linear;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active{
+        -webkit-box-shadow: 0 0 0 u.rem(30) var(--auto-completed-box-shadow-color) inset;
+        -webkit-text-fill-color: var(--auto-completed-text-color);
     }
 
     &__input::placeholder {

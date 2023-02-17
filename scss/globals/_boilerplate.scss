@@ -84,15 +84,15 @@ fieldset {
     border: 0;
 }
 
-input[type=checkbox] {
-    accent-color: var(--checkbox-accent-color);
-    width: u.rem(20);
-    height: u.rem(20);
-}
+// input[type=checkbox] {
+//     accent-color: var(--checkbox-accent-color);
+//     width: u.rem(20);
+//     height: u.rem(20);
+// }
 
-input[type=checkbox]:hover,[type=checkbox]:focus {
-    cursor: pointer;
-}
+// input[type=checkbox]:hover,[type=checkbox]:focus {
+//     cursor: pointer;
+// }
 
 hr {
     border: none;

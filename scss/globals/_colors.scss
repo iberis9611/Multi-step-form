@@ -6,7 +6,8 @@
     --confirm-btn-bgcolor: hsl(243, 100%, 62%);
     --next-btn-bgcolor: hsl(213, 96%, 18%);
     --next-btn-hover-bgcolor: hsl(213, 96%, 28%);
-    --checkbox-accent-color: hsl(243, 100%, 62%);
+    --checkbox-bgcolor: hsla(243, 100%, 62%, 0);
+    --checkbox-checked-bgcolor: hsl(243, 100%, 62%);
     --hr-bgcolor: hsl(229, 24%, 87%);
     --h2-color: hsl(213, 96%, 18%);
     --h3-color: hsl(231, 11%, 63%);
@@ -39,9 +40,12 @@
     --card-bottom-bgcolor: hsl(0, 0%, 100%);
     --marineblue-color: hsl(213, 96%, 18%);
     --purplishblue-color: hsl(243, 100%, 62%);
+    --auto-completed-text-color: hsl(222, 100%, 7%);
+    --auto-completed-box-shadow-color: hsl(0, 0%, 100%, 0.87);
 
     --aside-mobile-bg-image: url("../images/bg-sidebar-mobile.svg");
     --aside-desktop-bg-image: url("../images/bg-sidebar-desktop.svg");
+    --checkbox-gb-image: url("../images/icon-checkmark.svg");
 }
 
 @media (prefers-color-scheme: dark) {
@@ -77,6 +81,8 @@
         --aside-h3-color: hsla(0, 0%, 100%, 0.87);
         --main-bgcolor: hsl(0, 0%, 0%);
         --marineblue-color: hsla(0, 0%, 100%, 0.87);
+        --auto-completed-text-color: hsl(0, 0%, 100%, 0.87);
+        --auto-completed-box-shadow-color: hsl(222, 100%, 7%);
 
         --aside-mobile-bg-image: url("../images/bg-sidebar-mobile-dark.jpg");
         --aside-desktop-bg-image: url("../images/bg-sidebar-desktop-dark.jpg");

@@ -93,7 +93,7 @@
             <button class="button" type="button" data-next>Next Step</button>
           </div>
         </fieldset>
-        <fieldset class="card " data-step>
+        <fieldset class="card" data-step>
           <div class="card__body">
             <legend class="card__legend">
               <h2>Select your plan</h2>
@@ -141,33 +141,42 @@
             </legend>
             <div class="card__content addon">
               <div class="addon__item picked">
-                <input class="addon__input" type="checkbox" id="onlineService" name="onlineService" checked>
                 <label class="addon__label" for="onlineService">
-                  <div class="addon__wrapper">
-                    <h4 class="addon__h4">Online service</h4>
-                    <p class="addon__p">Access to multiplayer games</p>
-                  </div>
-                  <p class="addon__p purplishBlue" data-addon-price>+$1/mo</p>
+                  <input class="addon__input offscreen" type="checkbox" id="onlineService" name="onlineService" checked>
+                  <span class="addon__newInput"></span>
+                  <span class="addon__content">
+                    <span class="addon__wrapper">
+                      <span class="addon__name">Online service</span>
+                      <span class="addon__info">Access to multiplayer games</span>
+                    </span>
+                    <span class="addon__price purplishBlue" data-addon-price>+$1/mo</span>
+                  </span>
                 </label>
               </div>
               <div class="addon__item picked">
-                <input class="addon__input" type="checkbox" id="largeStorage" name="largeStorage" checked>
                 <label class="addon__label" for="largeStorage">
-                  <div class="addon__wrapper">
-                    <h4 class="addon__h4">Larger storage</h4>
-                    <p class="addon__p">Extra 1TB of cloud save</p>
-                  </div>
-                  <p class="addon__p purplishBlue" data-addon-price>+$2/mo</p>
+                  <input class="addon__input offscreen" type="checkbox" id="largeStorage" name="largeStorage" checked>
+                  <span class="addon__newInput"></span>
+                  <span class="addon__content">
+                    <span class="addon__wrapper">
+                      <span class="addon__name">Larger storage</span>
+                      <span class="addon__info">Extra 1TB of cloud save</span>
+                    </span>
+                    <span class="addon__price purplishBlue" data-addon-price>+$2/mo</span>
+                  </span>
                 </label>
               </div>
               <div class="addon__item">
-                <input class="addon__input" type="checkbox" id="customizableProfile" name="customizableProfile">
                 <label class="addon__label" for="customizableProfile">
-                  <div class="addon__wrapper">
-                    <h4 class="addon__h4">Customizable Profile</h4>
-                    <p class="addon__p">Custom theme on your profile</p>
-                  </div>
-                  <p class="addon__p purplishBlue" data-addon-price>+$2/mo</p>
+                  <input class="addon__input offscreen" type="checkbox" id="customizableProfile" name="customizableProfile">
+                  <span class="addon__newInput"></span>
+                  <span class="addon__content">
+                    <span class="addon__wrapper">
+                      <span class="addon__name">Customizable Profile</span>
+                      <span class="addon__info">Custom theme on your profile</span>
+                    </span>
+                    <span class="addon__price purplishBlue" data-addon-price>+$2/mo</span>
+                  </span>
                 </label>
               </div>
             </div>

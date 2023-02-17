@@ -247,17 +247,65 @@ button[data-next] {
 }
 ```
 
-- Note: 
-Element.querySelector() returns an element.
-Element.querySelectorAll() returns a static (not live) NodeList.
-Element.getElementsByTagName() returns a live HTMLCollection.
+16. caret-color: set the color used to draw the text input caret. outline:none - remove the outline when input box is selected.
+```scss
+&__input {
+  caret-color: var(--purplishblue-color);
+  outline: none;
+}
+```
 
-Element "h5" not allowed as child of element "label" in this context
+17. How to change the input box style when it is auto-completed?
+```scss
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 u.rem(30) var(--auto-completed-box-shadow-color) inset;
+    -webkit-text-fill-color: var(--auto-completed-text-color);
+}
+```
+
+18. How to style a checkbox using CSS?  
+Wrap the checkbox in a label element, hide it, and add a new element after the checkbox.
+```html
+<label class="addon__label" for="onlineService">
+  <input class="addon__input offscreen" type="checkbox" id="onlineService" name="onlineService" checked>
+  <span class="addon__newInput"></span>
+  <span class="addon__content">
+    <span class="addon__wrapper">
+      <span class="addon__name">Online service</span>
+      <span class="addon__info">Access to multiplayer games</span>
+    </span>
+    <span class="addon__price purplishBlue" data-addon-price>+$1/mo</span>
+  </span>
+</label>
+```
+```scss
+&__newInput {
+  display: block;
+  width: u.rem(18);
+  height: u.rem(18);
+  border: u.rem(1) solid var(--border-color);
+  border-radius: u.rem(3);
+  background-color: var(--checkbox-bgcolor);
+}
+
+input[type=checkbox]:checked ~ &__newInput {
+  background-color: var(--checkbox-checked-bgcolor);
+  background-image: var(--checkbox-gb-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+}
+```
+
+19.  Note: 
+- Element.querySelector() returns an element.
+- Element.querySelectorAll() returns a static (not live) NodeList.
+- Element.getElementsByTagName() returns a live HTMLCollection.
 
 ### Continued development
-
-- Update checkbox style
-- Update input fill-in background
 
 ### Useful resources
 

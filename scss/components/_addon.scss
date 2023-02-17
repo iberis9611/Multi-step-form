@@ -32,15 +32,58 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: u.rem(16);
+    }
+
+    &__newInput {
+        display: block;
+        width: u.rem(18);
+        height: u.rem(18);
+        border: u.rem(1) solid var(--border-color);
+        border-radius: u.rem(3);
+        background-color: var(--checkbox-bgcolor);
+    }
+
+    input[type=checkbox]:checked ~ &__newInput {
+        background-color: var(--checkbox-checked-bgcolor);
+        background-image: var(--checkbox-gb-image);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 60%;
+    }
+
+    &__content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     &__wrapper {
         display: flex;
         flex-direction: column;
+        gap: u.rem(8);
 
         @include u.breakpoint(medium) {
             gap: u.rem(10);
         }
+    }
+
+    &__name {
+        display: block;
+        color: var(--h4-color);
+        font-size: u.rem(13);
+    }
+
+    &__info {
+        display: block;
+        color: var(--p-color);
+        font-size: u.rem(12);
+    }
+
+    &__price {
+        display: block;
+        font-size: u.rem(12);
     }
 }
 
